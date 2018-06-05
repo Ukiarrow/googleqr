@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+    document.addEventListener("deviceready", function() {
+	var option = {
+  enableHighAccuracy: true // use GPS as much as possible
+};
+plugin.google.maps.LocationService.getMyLocation(option, function(location) {
+
+  // Create a map with the device location
+  var mapDiv = document.getElementById('map_canvas');
+  var map = plugin.google.maps.Map.getMap(mapDiv, {
+    'camera': {
+      target: location.latLng,
+      zoom: 16
+    }
+  });
+
+
+  // Add a marker
+  var text = ["Current your location:\n",
+    "latitude:" + location.latLng.lat.toFixed(3),
+    "longitude:" + location.latLng.lng.toFixed(3),
+    "speed:" + location.speed,
+    "time:" + location.time,
+    "bearing:" + location.bearing].join("\n");
+
+  var marker = map.addMarker({
+    title: text,
+    position: location.latLng
+  });
+
+  marker.showInfoWindow();
+
+});
+
+    }, false);
+
+    </script>
+    <style type="text/css">
+    #map_canvas { /* Must bigger size than 100x100 pixels */
+      width: 100%;
+      height: 500px;
+    }
+    button {
+      padding: .5em;
+      margin: .5em;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <div id="map_canvas">
+      <button id="button">Click me!</button>
+    </div>
+  </body>
+</html>

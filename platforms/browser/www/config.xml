@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="gmaps.cfloress.unab" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Demo-GMAPS</name>
+    <description>
+Aplicacion de Ejemplo GMAPS.
+</description>
+    <author email="cfloressapiain@gmail.com" href="http://www.unab.cl">
+Claudio Andres Flores Sapiain
+</author>
+    <icon height="57" src="icons/ios/icon.png" width="57" />
+    <icon gap:platform="ios" height="72" src="icons/ios/icon-72.png" width="72" />
+    <icon height="114" src="icons/ios/icon_at_2x.png" width="114" />
+    <icon gap:density="ldpi" gap:platform="android" src="icons/android/ldpi.png" />
+    <icon gap:density="mdpi" gap:platform="android" src="icons/android/mdpi.png" />
+    <icon gap:density="hdpi" gap:platform="android" src="icons/android/hdpi.png" />
+    <icon gap:density="xhdpi" gap:platform="android" src="icons/android/xhdpi.png" />
+    <icon gap:platform="winphone" src="icons/winphone/icon.png" />
+    <icon gap:platform="winphone" gap:role="background" src="icons/winphone/tileicon.png" />
+    <gap:splash height="480" src="splashes/ios/Default.png" width="320" />
+    <gap:splash height="960" src="splashes/ios/Default_at_2x.png" width="640" />
+    <gap:splash height="1136" src="splashes/ios/Default_iphone5.png" width="640" />
+    <gap:splash height="768" src="splashes/ios/splash_ipad_Landscape.png" width="1024" />
+    <gap:splash height="1024" src="splashes/ios/splash_ipad_Portrait.png" width="768" />
+    <gap:splash gap:density="ldpi" gap:platform="android" src="splashes/android/ldpi.png" />
+    <gap:splash gap:density="mdpi" gap:platform="android" src="splashes/android/mdpi.png" />
+    <gap:splash gap:density="hdpi" gap:platform="android" src="splashes/android/hdpi.png" />
+    <gap:splash gap:density="xhdpi" gap:platform="android" src="splashes/android/xhdpi.png" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <access origin="http://72.14.183.67/ws/*" />
+    <preference name="target-device" value="universal" />
+    <preference name="orientation" value="portrait" />
+    <preference name="exit-on-suspend" value="true" />
+    <preference name="fullscreen" value="false" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="phonegap-version" value="cli-7.1.0" />
+    <preference name="android-minSdkVersion" value="19" />
+</widget>
